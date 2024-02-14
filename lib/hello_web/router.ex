@@ -21,6 +21,11 @@ defmodule HelloWeb.Router do
     get "/users", PageController, :users
   end
 
+  scope "/api" ForumWeb do
+    pipe_through :api
+    resources "/posts", PostController, except: [:new, :edit]
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", HelloWeb do
   #   pipe_through :api
