@@ -6,4 +6,12 @@ defmodule HelloWeb.PageController do
     # so skip the default app layout.
     render(conn, :home, layout: false)
   end
+
+  def users(conn, _params) do
+    users = [
+      %{id:1,name:"Robert",email:"robert@gmail.com"}
+      %{id:1,name:"Robert",email:"robert@gmail.com"}
+    ]
+    json(conn,:users)
+  end
 end
