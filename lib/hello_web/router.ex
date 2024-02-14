@@ -21,7 +21,7 @@ defmodule HelloWeb.Router do
     get "/users", PageController, :users
   end
 
-  scope "/api" ForumWeb do
+  scope "/api", HelloWeb do
     pipe_through :api
     resources "/posts", PostController, except: [:new, :edit]
   end
