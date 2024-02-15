@@ -7,11 +7,4 @@ defmodule HelloWeb.PageController do
     render(conn, :home, layout: false)
   end
 
-  def users(conn, _params) do
-    users = [
-      %{id: 1,name: "Robert",email: "robert@gmail.com"},
-      %{id: 2,name: "Robert",email: "robert@gmail.com"}
-    ]
-    json(conn,%{users: users})
-  end
 end
